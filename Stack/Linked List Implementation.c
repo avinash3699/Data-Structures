@@ -18,10 +18,7 @@ void push(int number_to_be_inserted){
     struct node *temp_node;
     temp_node = (struct node*)malloc(sizeof(struct node));
     temp_node->data = number_to_be_inserted;
-    
-    if(is_Stack_EMPTY()) temp_node->next = NULL;
-    else temp_node->next = top;
-    
+    temp_node->next = top;
     top = temp_node;
     printf("Insertion(Pushing) is SUCCESS. Inserted the element %d\n\n",top->data);
     count_of_elements_in_stack++;
